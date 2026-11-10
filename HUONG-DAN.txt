@@ -1,0 +1,30 @@
+ROBLOX AVATAR RANKING 2.0
+
+TÍNH NĂNG
+- Tìm avatar bằng username Roblox qua Netlify Function.
+- Tải ảnh PNG/JPG/WEBP trực tiếp.
+- AI phân tích ảnh và chấm 5 tiêu chí, tổng 100 điểm.
+- Hiển thị BASIC / RARE / EPIC / MYTHICAL / PEAKK!, ưu điểm, khuyết điểm và gợi ý cải thiện.
+
+CÁCH ĐƯA WEBSITE LÊN NETLIFY
+1. Giải nén ZIP này.
+2. Đưa toàn bộ nội dung thư mục lên một GitHub repository (giữ nguyên netlify.toml và netlify/functions).
+3. Mở https://app.netlify.com/ -> Add new project -> Import an existing project.
+4. Chọn repository đó. Build command để trống; Publish directory nhập dấu chấm: .
+5. Deploy site.
+
+BẬT TÍNH NĂNG AI (BẮT BUỘC)
+1. Tạo API key trong tài khoản OpenAI API của chủ website. API usage có thể tính phí riêng; ChatGPT Free/Plus không tự bao gồm API credit.
+2. Trong Netlify, mở Site configuration -> Environment variables -> Add a variable.
+3. Key: OPENAI_API_KEY
+4. Value: API key của chủ website. Không đưa key vào index.html, không gửi key cho người khác.
+5. Lưu biến môi trường rồi Trigger deploy -> Deploy site.
+6. Mở link .netlify.app và tải ảnh để thử AI.
+
+LƯU Ý
+- Không thể bật AI thật nếu chưa cấu hình OPENAI_API_KEY hợp lệ.
+- API key phải được giữ ở server-side Netlify Function, không nhúng vào mã trình duyệt.
+- API ảnh dùng OpenAI Responses API với model gpt-4.1-mini có khả năng xử lý ảnh.
+- API usage có thể phát sinh chi phí theo mức giá hiện hành; nên đặt budget/usage limits trong trang quản lý API.
+- Nếu chỉ mở index.html trực tiếp từ điện thoại (file://), các API tìm username và AI sẽ không chạy. Phải deploy trên Netlify.
+- AI chỉ đánh giá ảnh, không thể xác thực UGC chính hãng chỉ từ hình ảnh.

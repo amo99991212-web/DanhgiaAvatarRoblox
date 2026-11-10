@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/roblox-user"
+  to = "/.netlify/functions/roblox-user"
+  status = 200
+
+[[redirects]]
+  from = "/api/rate-avatar"
+  to = "/.netlify/functions/rate-avatar"
+  status = 200

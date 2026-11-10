@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0c13">
+<title>Roblox Avatar Ranking 2.0</title>
+<style>
+:root{--bg:#0b0c13;--panel:#171a29;--panel2:#101320;--line:#30364d;--text:#f5f6ff;--muted:#a6acc4;--purple:#a78bfa;--cyan:#67d7ee}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 12% 0%,#30224f 0,transparent 38%),radial-gradient(ellipse at 100% 20%,#142d49 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+main{width:min(940px,92%);margin:auto;padding:35px 0 60px}.hero{text-align:center;margin-bottom:26px}.eyebrow{font-size:11px;font-weight:900;letter-spacing:2.5px;color:#c0adff}.hero h1{font-size:clamp(29px,6vw,52px);letter-spacing:-1.8px;margin:10px 0}.hero h1 span{background:linear-gradient(90deg,#b49aff,#64d8ee);background-clip:text;-webkit-background-clip:text;color:transparent}.hero p,.sub{color:var(--muted);font-size:14px}.panel{background:linear-gradient(145deg,rgba(28,32,49,.97),rgba(16,18,30,.97));border:1px solid var(--line);border-radius:21px;padding:21px;margin:17px 0;box-shadow:0 18px 50px #0004}.section-title{font-size:19px;margin:0 0 5px}.sub{margin:0 0 17px;line-height:1.5}.search{display:flex;gap:10px}.search input[type=text]{flex:1;min-width:0;background:#0d0f19;border:1px solid #3b415c;color:white;border-radius:12px;padding:14px;font-size:16px;outline:none}.search input:focus{border-color:var(--purple)}button{border:0;border-radius:12px;padding:13px 18px;background:linear-gradient(120deg,#9c7cff,#5bcce9);color:#0b0c13;font-weight:950;cursor:pointer;font-size:14px}button:disabled{opacity:.55;cursor:wait}.status{font-size:13px;color:var(--muted);margin-top:12px;line-height:1.5}.status.error{color:#ff9eaa}.status.ok{color:#8de7bf}.profile{display:grid;grid-template-columns:155px 1fr;gap:19px;align-items:center}.avatar{width:155px;aspect-ratio:1;object-fit:contain;border-radius:17px;background:#0c0e18;border:1px solid #444b67}.name{font-size:25px;font-weight:950;margin:4px 0}.handle{font-size:13px;color:var(--muted)}a{color:#c9bcff}.upload{display:block;border:1.5px dashed #5c5683;border-radius:16px;padding:22px;text-align:center;background:#111421;cursor:pointer}.upload:hover{border-color:#ad98ff;background:#17172a}.upload input{display:none}.upload strong{display:block;margin-bottom:5px}.upload span{font-size:12px;color:var(--muted)}.preview-wrap{display:flex;align-items:center;gap:15px;margin-top:14px}.preview{width:115px;height:115px;object-fit:contain;background:#0b0d17;border:1px solid var(--line);border-radius:13px}.preview-wrap[hidden]{display:none}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.actions button{flex:1}.secondary{background:#252a40;color:#e5e5ff;border:1px solid #414966}.scorehead{display:flex;align-items:center;justify-content:space-between;gap:12px}.score{font-size:48px;font-weight:1000;letter-spacing:-2px}.rank{padding:9px 13px;border-radius:99px;border:1px solid currentColor;font-size:13px;font-weight:1000;letter-spacing:1.5px}.basic{color:#b7bdcd}.rare{color:#66d3ff}.epic{color:#c09aff}.mythical{color:#ffca69}.peak{color:#ff79a8}.bar{height:9px;background:#30354a;border-radius:99px;overflow:hidden;margin:10px 0 20px}.bar div{height:100%;width:0;background:linear-gradient(90deg,#9b7bff,#61d7ee)}.scores{display:grid;gap:13px}.scoreline-head{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:6px}.scoreline-head span:last-child{color:#c9bcff;font-weight:850}.track{height:7px;background:#30354a;border-radius:99px;overflow:hidden}.track div{height:100%;background:linear-gradient(90deg,#9c7cff,#5bcce9);border-radius:99px}.feedback{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:18px}.feedback article{padding:15px;border-radius:14px;background:#101421;border:1px solid var(--line)}.feedback h3{margin:0 0 10px;font-size:15px}.feedback ul{padding-left:18px;margin:0;color:#d7daea;font-size:13px;line-height:1.6}.pros h3{color:#8de7bf}.cons h3{color:#ffadba}.summary{padding:14px;border-radius:13px;background:#101421;border:1px solid var(--line);font-size:14px;line-height:1.6;margin-top:14px}.ranks{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.rank-card{padding:12px 6px;text-align:center;background:#10121d;border:1px solid var(--line);border-radius:12px}.rank-card b{display:block;font-size:11px}.rank-card small{display:block;color:var(--muted);margin-top:5px;font-size:11px}.fine{font-size:12px;color:#9299b4;line-height:1.55}.footer{text-align:center;color:#777f9b;font-size:12px;margin-top:24px}
+@media(max-width:600px){main{padding-top:23px}.panel{padding:16px}.search{flex-direction:column}.profile{grid-template-columns:1fr;text-align:center}.avatar{margin:auto}.feedback{grid-template-columns:1fr}.ranks{grid-template-columns:repeat(2,1fr)}.scorehead{align-items:flex-start}.preview-wrap{align-items:flex-start}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero"><div class="eyebrow">COMMUNITY AVATAR TIER LIST</div><h1>ROBLOX <span>AVATAR RANKING 2.0</span></h1><p>Find your avatar. Let AI judge the fit. Claim your rank.</p></header>
+
+<section class="panel">
+<h2 class="section-title">🔎 Cách 1 — Tìm bằng username</h2><p class="sub">Nhập username Roblox, không cần dấu @.</p>
+<form class="search" id="searchForm"><input id="username" type="text" maxlength="20" placeholder="Ví dụ: Builderman" autocomplete="off" required><button id="searchBtn">TÌM AVATAR</button></form>
+<div id="searchStatus" class="status" role="status">Nếu tìm kiếm bị lỗi, dùng cách tải ảnh bên dưới nhé.</div>
+</section>
+
+<section class="panel">
+<h2 class="section-title">🖼️ Cách 2 — Tải ảnh avatar</h2><p class="sub">Chụp màn hình avatar Roblox hoặc chọn ảnh PNG, JPG, WEBP. Ảnh chỉ được gửi để phân tích khi m bấm nút AI.</p>
+<label class="upload" for="imageFile"><strong>＋ Chọn ảnh avatar từ thiết bị</strong><span>PNG / JPG / WEBP · tối đa 8 MB</span><input id="imageFile" type="file" accept="image/png,image/jpeg,image/webp"></label>
+<div class="preview-wrap" id="previewWrap" hidden><img id="preview" class="preview" alt="Ảnh avatar đã chọn"><div><strong id="fileName">Ảnh đã chọn</strong><div class="fine">Ảnh sẽ được thu nhỏ trước khi gửi để phân tích.</div></div></div>
+<div class="actions"><button id="judgeBtn" disabled>✨ AI CHẤM ĐIỂM AVATAR</button><button id="clearBtn" class="secondary" type="button">XÓA ẢNH</button></div>
+<div id="aiStatus" class="status" role="status">AI sẽ phân tích phong cách, phối màu, phụ kiện và độ hài hòa.</div>
+</section>
+
+<section class="panel" id="profilePanel" hidden>
+<div class="profile"><img id="robloxAvatar" class="avatar" alt="Roblox avatar"><div><div class="eyebrow">PLAYER FOUND</div><h2 id="displayName" class="name"></h2><div id="handle" class="handle"></div><p><a id="profileLink" target="_blank" rel="noopener">Mở hồ sơ Roblox ↗</a></p></div></div>
+</section>
+
+<section class="panel" id="resultPanel" hidden>
+<div class="scorehead"><div><div class="eyebrow">AI AVATAR SCORE</div><div class="score"><span id="total">0</span><span style="font-size:18px;color:#9299b4"> / 100</span></div></div><div id="rank" class="rank epic">EPIC</div></div>
+<div class="bar"><div id="totalBar"></div></div>
+<h2 class="section-title">📊 Bảng điểm chi tiết</h2><p class="sub">Điểm do AI ước lượng từ hình ảnh được gửi.</p>
+<div class="scores" id="scoreRows"></div>
+<div class="feedback"><article class="pros"><h3>✅ Ưu điểm</h3><ul id="pros"></ul></article><article class="cons"><h3>⚠️ Khuyết điểm</h3><ul id="cons"></ul></article></div>
+<div class="summary"><strong>🧠 Nhận xét của AI</strong><div id="summary" style="margin-top:6px"></div><strong style="display:block;margin-top:12px">💡 Gợi ý cải thiện</strong><div id="tips" style="margin-top:6px"></div></div>
+<p class="fine">AI chỉ đánh giá những gì nhìn thấy trong ảnh. Không thể xác minh món đồ có phải UGC chính hãng hay không nếu ảnh không thể hiện thông tin đó. Điểm mang tính tham khảo, không phải đánh giá chính thức của Roblox.</p>
+</section>
+
+<section class="panel"><h2 class="section-title">🏆 Rank System</h2><p class="sub">Các mốc điểm được chia liên tục, không trùng cấp.</p><div class="ranks"><div class="rank-card basic"><b>BASIC</b><small>0–20</small></div><div class="rank-card rare"><b>RARE</b><small>21–40</small></div><div class="rank-card epic"><b>EPIC</b><small>41–60</small></div><div class="rank-card mythical"><b>MYTHICAL</b><small>61–80</small></div><div class="rank-card peak"><b>PEAKK!</b><small>81–100</small></div></div></section>
+<div class="footer">Fan-made tool · Not affiliated with Roblox Corporation or OpenAI.</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+let selectedDataUrl=null;
+function status(id,msg,kind=''){ $(id).textContent=msg;$(id).className='status '+kind; }
+function rankFor(n){if(n<=20)return['BASIC','basic'];if(n<=40)return['RARE','rare'];if(n<=60)return['EPIC','epic'];if(n<=80)return['MYTHICAL','mythical'];return['PEAKK!','peak'];}
+function showResult(data){
+ const score=Math.max(0,Math.min(100,Math.round(Number(data.total_score)||0)));
+ const [label,cls]=rankFor(score);
+ $('total').textContent=score;$('rank').textContent=label;$('rank').className='rank '+cls;$('totalBar').style.width=score+'%';
+ const labels=[['Độ đẹp tổng thể',25,'beauty'],['Phối màu',20,'color'],['Độ độc đáo',20,'originality'],['UGC & phụ kiện',20,'accessories'],['Độ hài hòa outfit',15,'harmony']];
+ $('scoreRows').replaceChildren();
+ labels.forEach(([name,max,key])=>{const val=Math.max(0,Math.min(max,Number(data.scores?.[key])||0));const row=document.createElement('div');row.innerHTML=`<div class="scoreline-head"><strong></strong><span></span></div><div class="track"><div></div></div>`;row.querySelector('strong').textContent=name;row.querySelector('.scoreline-head span').textContent=`${val} / ${max}`;row.querySelector('.track div').style.width=(val/max*100)+'%';$('scoreRows').append(row);});
+ function fillList(id,items){const ul=$(id);ul.replaceChildren();(Array.isArray(items)?items:[]).slice(0,5).forEach(item=>{const li=document.createElement('li');li.textContent=String(item);ul.append(li);});if(!ul.children.length){const li=document.createElement('li');li.textContent='Chưa có nhận xét.';ul.append(li);}}
+ fillList('pros',data.strengths);fillList('cons',data.weaknesses);
+ $('summary').textContent=data.summary||'Chưa có nhận xét.';$('tips').textContent=data.improvement_tips||'Không có gợi ý bổ sung.';
+ $('resultPanel').hidden=false;$('resultPanel').scrollIntoView({behavior:'smooth',block:'start'});
+}
+$('searchForm').addEventListener('submit',async e=>{
+ e.preventDefault();const username=$('username').value.trim().replace(/^@/,'');if(!username)return;
+ $('searchBtn').disabled=true;$('searchBtn').textContent='ĐANG TÌM...';$('profilePanel').hidden=true;status('searchStatus','Đang tìm tài khoản Roblox…');
+ try{const res=await fetch('/api/roblox-user',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username})});const data=await res.json();if(!res.ok)throw Error(data.error||'Không tìm được tài khoản.');$('robloxAvatar').src=data.avatarUrl;$('displayName').textContent=data.user.displayName;$('handle').textContent='@'+data.user.name+' · ID: '+data.user.id;$('profileLink').href='https://www.roblox.com/users/'+data.user.id+'/profile';$('profilePanel').hidden=false;status('searchStatus','Đã tìm thấy avatar! Muốn AI chấm điểm tự động thì tải ảnh avatar lên mục bên dưới nhé.','ok');}
+ catch(err){status('searchStatus',err.message||'Lỗi kết nối. Thử tải ảnh avatar trực tiếp nhé.','error');}
+ finally{$('searchBtn').disabled=false;$('searchBtn').textContent='TÌM AVATAR';}
+});
+$('imageFile').addEventListener('change',async e=>{
+ const file=e.target.files?.[0];selectedDataUrl=null;$('judgeBtn').disabled=true;$('resultPanel').hidden=true;
+ if(!file){$('previewWrap').hidden=true;return;}
+ if(!['image/png','image/jpeg','image/webp'].includes(file.type)){status('aiStatus','Chỉ nhận ảnh PNG, JPG hoặc WEBP.','error');e.target.value='';return;}
+ if(file.size>8*1024*1024){status('aiStatus','Ảnh lớn hơn 8 MB. Hãy chọn ảnh nhỏ hơn nhé.','error');e.target.value='';return;}
+ try{
+  const original=await createImageBitmap(file);const scale=Math.min(1,1200/Math.max(original.width,original.height));const canvas=document.createElement('canvas');canvas.width=Math.round(original.width*scale);canvas.height=Math.round(original.height*scale);canvas.getContext('2d').drawImage(original,0,0,canvas.width,canvas.height);selectedDataUrl=canvas.toDataURL('image/jpeg',0.86);$('preview').src=selectedDataUrl;$('fileName').textContent=file.name;$('previewWrap').hidden=false;$('judgeBtn').disabled=false;status('aiStatus','Đã nhận ảnh. Bấm “AI CHẤM ĐIỂM AVATAR” để phân tích.','ok');
+ }catch(err){status('aiStatus','Không đọc được ảnh. Hãy thử ảnh khác nhé.','error');}
+});
+$('clearBtn').addEventListener('click',()=>{$('imageFile').value='';selectedDataUrl=null;$('previewWrap').hidden=true;$('judgeBtn').disabled=true;$('resultPanel').hidden=true;status('aiStatus','Đã xóa ảnh. Chọn ảnh mới để chấm điểm.');});
+$('judgeBtn').addEventListener('click',async()=>{
+ if(!selectedDataUrl)return;
+ $('judgeBtn').disabled=true;$('judgeBtn').textContent='AI ĐANG PHÂN TÍCH...';status('aiStatus','AI đang xem avatar và chấm từng tiêu chí. Có thể mất vài giây…');
+ try{const res=await fetch('/api/rate-avatar',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({image:selectedDataUrl})});const data=await res.json();if(!res.ok)throw Error(data.error||'AI không thể phân tích ảnh lúc này.');showResult(data);status('aiStatus','Đã phân tích xong!','ok');}
+ catch(err){status('aiStatus',err.message||'Có lỗi xảy ra. Thử lại nhé.','error');}
+ finally{$('judgeBtn').disabled=false;$('judgeBtn').textContent='✨ AI CHẤM ĐIỂM AVATAR';}
+});
+</script>
+</body>
+</html>
